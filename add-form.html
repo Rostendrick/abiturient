@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <!-- имя, фамилия, пол, номер группы (от 2 до 5 цифр или букв), e-mail (должен быть уникален), 
+    суммарное число баллов на ЕГЭ (проверять на адекватность), год рождения, местный или иногородний. -->
+        <form action="add.php" method="POST">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="text" name="surname" placeholder="Фамилия" required>
+            
+            <p>Пол:</p>
+            <label><input type="radio" name="sex" value="male" id="sex-male" required>Мужской</label>
+            <label><input type="radio" name="sex" value = "female" id="sex-female" required>Женский</label>
+            
+            <input type="number" name="group-number" placeholder="Номер группы" required>
+            <input type="mail" name="mail" placeholder="Адрес электронной почты" required>
+            <input type="number" name="ege-points" placeholder="Баллы ЕГЭ" required>
+            <input type="date" name="date-of-birth" required>
+
+            <label><input type="radio" value="place-local" name="place" required>Местный</label>
+            <label><input type="radio"  value="place-not-local" name="place" required>Приезжий</label>
+
+            <input type="submit">
+        </form>
+</body>
+</html>
