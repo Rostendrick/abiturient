@@ -1,15 +1,14 @@
 <?php 
-$page = $_GET['page'];
 include 'index.html';
+$page = isset($_GET['page']) ? $_GET['page'] : 'page';
 switch ($page) {
     case ('list'):
         include 'list.php';
         break;
     case ('add'):
         include 'add-form.html';
-        include 'add.php';
         break;
     default:
-        include 'list.php';;
+        include 'list.php';
         break;
-}
+    }

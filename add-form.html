@@ -15,16 +15,16 @@
             <input type="text" name="surname" placeholder="Фамилия" required>
             
             <p>Пол:</p>
-            <label><input type="radio" name="sex" value="male" id="sex-male" required>Мужской</label>
-            <label><input type="radio" name="sex" value = "female" id="sex-female" required>Женский</label>
+            <label><input type="radio" name="sex" value="0" id="sex-male" required>Мужской</label>
+            <label><input type="radio" name="sex" value = "1" id="sex-female" required>Женский</label>
             
-            <input type="number" name="group-number" placeholder="Номер группы" required>
+            <input type="number" name="group_number" placeholder="Номер группы" required>
             <input type="mail" name="mail" placeholder="Адрес электронной почты" required>
-            <input type="number" name="ege-points" placeholder="Баллы ЕГЭ" required>
-            <input type="date" name="date-of-birth" required>
-
-            <label><input type="radio" value="place-local" name="place" required>Местный</label>
-            <label><input type="radio"  value="place-not-local" name="place" required>Приезжий</label>
+            <input type="number" name="ege_points" placeholder="Баллы ЕГЭ" required>
+            <input type="date" name="date_of_birth" required>
+            
+            <label><input type="radio"  value="0" name="place" required>Приезжий</label>
+            <label><input type="radio" value="1" name="place" required>Местный</label>
 
             <input type="submit">
         </form>
