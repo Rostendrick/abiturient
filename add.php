@@ -6,8 +6,8 @@ try {
     $db = new PDO("mysql:host=$servername; dbname=abiturient", $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO users (name, surname, sex, number_of_group, mail, ege_points, birthdate, local) VALUES ('$_POST[name]', '$_POST[surname]', $_POST[sex], $_POST[group_number], '$_POST[mail]', $_POST[ege_points], '$_POST[date_of_birth]', $_POST[place])";
-    echo $sql . '<br>' . '<br>';
     $db -> exec($sql);
+    echo "Вы зарегистрированы";
 }
 catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
