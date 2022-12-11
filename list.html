@@ -1,0 +1,23 @@
+<table <table border="1" cellpading="50" cellspacing="0">
+    <tr class="head_tr">
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Пол</td>
+        <td>Номер группы</td>
+        <td>Электронная почта</td>
+        <td>Баллы ЕГЭ</td>
+        <td>Дата рождения</td>
+        <td>Местный или приезжий</td>
+    </tr>
+<?php foreach($users_array as $user): ?>
+    <tr>
+    <?php foreach($user as $userdata): ?>
+        <td><?= $userdata ?></td>
+    <?php endforeach; ?>
+    </tr>
+<?php endforeach; ?>
+
+
+
+
+</table>
