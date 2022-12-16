@@ -3,8 +3,8 @@
     <h2>Добавление нового абитуриента</h2>
     <div class="form-container">
         <form action="add.php" method="POST">
-            <input type="text" name="name" placeholder="Имя" required>
-            <input type="text" name="surname" placeholder="Фамилия" required>
+            <input type="text" name="name" placeholder="Имя" required maxlength="20">
+            <input type="text" name="surname" placeholder="Фамилия" required maxlength="40">
             
             <p>Пол:</p>
             <label><input type="radio" name="sex" value="0" id="sex-male" required>Мужской</label>
@@ -12,11 +12,17 @@
             
             <input type="number" name="group_number" placeholder="Номер группы" required>
             <input type="mail" name="mail" placeholder="Адрес электронной почты" required>
-            <input type="number" name="ege_points" placeholder="Баллы ЕГЭ" required>
-            <input type="date" name="date_of_birth" required>
+            <input type="number" name="ege_points" placeholder="Баллы ЕГЭ" required max="400">
+            <input type="date" name="date_of_birth" min="1900-01-01" max="<?= date('Y-m-d'); ?>" required>
             
             <label><input type="radio"  value="0" name="place" required>Приезжий</label>
             <label><input type="radio" value="1" name="place" required>Местный</label>
+            <span>Введите логин для личного кабинета:</span>
+            <input type="text" name="login" required>
+            <span>Введите пароль для личного кабинета:</span>
+            <input type="password" name="password" required>
+            <!-- <span>Повторите пароль:</span>
+            <input type="password" required> -->
 
             <input type="submit">
         </form>

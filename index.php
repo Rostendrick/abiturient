@@ -1,5 +1,8 @@
 <?php 
 include 'index.html';
+
+
+
 $page = isset($_GET['page']) ? $_GET['page'] : 'page';
 switch ($page) {
     case ('list'):
@@ -7,6 +10,9 @@ switch ($page) {
         break;
     case ('add'):
         include 'add-form.html';
+        break;
+    case ('signin'):
+        include 'signin.html';
         break;
     default:
         include 'list.php';

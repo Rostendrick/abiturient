@@ -4,6 +4,9 @@ body {
 
 header {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
 }
 
 .navigation {
@@ -15,4 +18,8 @@ header {
 
 .navigation:hover {
     color: blue;
+}
+
+.authorization-wrap {
+    /* display: flex; */
 }
