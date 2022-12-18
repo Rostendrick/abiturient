@@ -14,15 +14,13 @@
             <input type="mail" name="mail" placeholder="Адрес электронной почты" required>
             <input type="number" name="ege_points" placeholder="Баллы ЕГЭ" required max="400">
             <input type="date" name="date_of_birth" min="1900-01-01" max="<?= date('Y-m-d'); ?>" required>
-            
+            <p>Местный или приезжий?</p>
             <label><input type="radio"  value="0" name="place" required>Приезжий</label>
             <label><input type="radio" value="1" name="place" required>Местный</label>
             <span>Введите логин для личного кабинета:</span>
             <input type="text" name="login" required>
             <span>Введите пароль для личного кабинета:</span>
             <input type="password" name="password" required>
-            <!-- <span>Повторите пароль:</span>
-            <input type="password" required> -->
 
             <input type="submit">
         </form>

@@ -6,7 +6,7 @@ try {
     $db = new PDO("mysql:host=$servername; dbname=abiturient", $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sth = $db->prepare("SELECT * FROM users");
+    $sth = $db->prepare("SELECT name, surname, sex, number_of_group, mail, ege_points, birthdate, local FROM users");
     $sth->execute();
     $users_array = $sth->fetchAll(PDO::FETCH_ASSOC);
 
